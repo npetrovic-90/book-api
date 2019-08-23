@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Buyer;
 
+use App\Buyer;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\ApiController;
 
-class BuyerController extends Controller
+class BuyerController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -14,29 +15,18 @@ class BuyerController extends Controller
      */
     public function index()
     {
-        //
+        //Not all users are buyers,only those which id is contained in
+        //transaction table
+        $buyers=Buyer::has('transactions')->get();
+
+
+        //returning corresponding code and data
+        return $this->showAll($buyers);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+    
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+   
 
     /**
      * Display the specified resource.
@@ -46,40 +36,19 @@ class BuyerController extends Controller
      */
     public function show($id)
     {
-        //
+        //getting single user that also exists in transactions table
+
+        $buyer=Buyer::has('transactions')->findOrFail($id);
+
+
+        //returning corresponding code and data
+        return $this->showOne($buyer);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+    
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+   
+
+    
 }

@@ -54,17 +54,36 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
+    //checks if user is verified
     public function isVerified(){
         return $this->verifed==User::VERIFIED_USER;
     }
-
+    //checks if user is admin
     public function isAdmin(){
         return $this->admin==User::ADMIN_USER;
     }
-
+    //generate verification token
     public static function generateVerificationCode(){
         
         return str_random(40);
     }
+
+    //mutator for name
+    public function setNameAttribute($name){
+
+        $this->attributes['name']= strtolower($name);
+    }
+    //accessor for name
+    public function getNameAttribute($name){
+
+       return ucwords($name);
+    }
+
+     //mutator for email
+    public function setEmailAttribute($email){
+
+        $this->attributes['email']= strtolower($email);
+    }
+    
+
 }

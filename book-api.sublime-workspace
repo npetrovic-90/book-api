@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"mt",
+				"mt_rand"
+			],
+			[
 				"S",
 				"Support〔namespace〕"
 			]
@@ -15,33 +19,34 @@
 			"file": "app/User.php",
 			"settings":
 			{
-				"buffer_size": 1273,
+				"buffer_size": 1303,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/Seller.php",
+			"file": "database/seeds/DatabaseSeeder.php",
 			"settings":
 			{
-				"buffer_size": 153,
+				"buffer_size": 1106,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "config/app.php",
+			"file": "database/factories/UserFactory.php",
 			"settings":
 			{
-				"buffer_size": 9174,
+				"buffer_size": 2134,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/Providers/AppServiceProvider.php",
+			"file": "database/migrations/2019_08_20_135359_create_transactions_table.php",
 			"settings":
 			{
-				"buffer_size": 485,
+				"buffer_size": 873,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -103,25 +108,34 @@
 	[
 		"/C/xampp/htdocs/book-api",
 		"/C/xampp/htdocs/book-api/app",
-		"/C/xampp/htdocs/book-api/app/Providers",
 		"/C/xampp/htdocs/book-api/database",
+		"/C/xampp/htdocs/book-api/database/factories",
 		"/C/xampp/htdocs/book-api/database/migrations",
-		"/C/xampp/htdocs/book-api/routes"
+		"/C/xampp/htdocs/book-api/database/seeds"
 	],
 	"file_history":
 	[
-		"/C/xampp/htdocs/book-api/config/database.php",
+		"/C/xampp/htdocs/book-api/database/migrations/2019_08_20_135342_create_books_table.php",
+		"/C/xampp/htdocs/book-api/app/Seller.php",
 		"/C/xampp/htdocs/book-api/app/Book.php",
+		"/C/xampp/htdocs/book-api/database/factories/UserFactory.php",
+		"/C/xampp/htdocs/book-api/database/seeds/DatabaseSeeder.php",
+		"/C/xampp/htdocs/book-api/database/migrations/2019_08_20_151930_book_category_table.php",
+		"/C/xampp/htdocs/book-api/database/migrations/2019_08_20_151725_category_book_table.php",
+		"/C/xampp/htdocs/book-api/database/migrations/2019_08_20_135359_create_transactions_table.php",
+		"/C/xampp/htdocs/book-api/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/xampp/htdocs/book-api/database/migrations/2019_08_20_135316_create_categories_table.php",
+		"/C/xampp/htdocs/book-api/app/Providers/AppServiceProvider.php",
+		"/C/xampp/htdocs/book-api/config/app.php",
+		"/C/xampp/htdocs/book-api/app/User.php",
+		"/C/xampp/htdocs/book-api/config/database.php",
 		"/C/xampp/htdocs/book-api/app/Transaction.php",
 		"/C/xampp/htdocs/book-api/app/Buyer.php",
 		"/C/xampp/htdocs/book-api/app/Category.php",
 		"/C/xampp/htdocs/book-api/routes/web.php",
 		"/C/xampp/htdocs/book-api/routes/api.php",
-		"/C/xampp/htdocs/book-api/database/migrations/2014_10_12_000000_create_users_table.php",
 		"/C/xampp/htdocs/book-api/app/Http/Controllers/Category/CategoryController.php",
 		"/C/xampp/htdocs/book-api/app/Http/Controllers/User/UserController.php",
-		"/C/xampp/htdocs/book-api/app/Seller.php",
-		"/C/xampp/htdocs/book-api/app/Providers/AppServiceProvider.php",
 		"/C/xampp/htdocs/book-api/.env",
 		"/C/xampp/htdocs/book-api/app/Providers/RouteServiceProvider.php",
 		"/C/xampp/htdocs/book-api/routes/channels.php",
@@ -174,20 +188,20 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1273,
+						"buffer_size": 1303,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								600,
-								600
+								393,
+								393
 							]
 						],
 						"settings":
 						{
-							"SL.13.region_keys":
+							"SL.46.region_keys":
 							[
 								"sublime_linter.protected_regions"
 							],
@@ -197,7 +211,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 486.0,
+						"translation.y": 162.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -205,32 +219,33 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/Seller.php",
+					"file": "database/seeds/DatabaseSeeder.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 153,
+						"buffer_size": 1106,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								35,
-								35
+								1015,
+								1015
 							]
 						],
 						"settings":
 						{
-							"SL.27.region_keys":
+							"SL.47.region_keys":
 							[
-								"sublime_linter.protected_regions"
 							],
 							"auto_complete": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -238,32 +253,34 @@
 				},
 				{
 					"buffer": 2,
-					"file": "config/app.php",
+					"file": "database/factories/UserFactory.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9174,
+						"buffer_size": 2134,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								551,
-								551
+								1752,
+								1752
 							]
 						],
 						"settings":
 						{
-							"SL.30.region_keys":
+							"SL.50.region_keys":
 							[
+								"sublime_linter.protected_regions"
 							],
+							"auto_complete": false,
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 761.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -271,24 +288,24 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/Providers/AppServiceProvider.php",
+					"file": "database/migrations/2019_08_20_135359_create_transactions_table.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 485,
+						"buffer_size": 873,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								249,
-								249
+								595,
+								595
 							]
 						],
 						"settings":
 						{
-							"SL.31.region_keys":
+							"SL.57.region_keys":
 							[
 							],
 							"auto_complete": false,
