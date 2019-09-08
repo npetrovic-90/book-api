@@ -2,16 +2,21 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-use App\Category;
 use App\Seller;
+use App\Category;
 use App\Transaction;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Book extends Model
 {
     //s
+    use SoftDeletes;
+
     const AVAILABLE_BOOK='available';
     const UNAVAILABLE_BOOK='unavailable';
+
+    protected $dates=['deleted_at'];
 
     protected $fillable=[
 		'title',
@@ -23,10 +28,12 @@ class Book extends Model
 
 
     ];
+    
+    protected $hidden=['pivot'];
 
     public function isAvailable(){
 
-    	return $this->status==Product::AVAILABLE_BOOK;
+    return $this->status==Book::AVAILABLE_BOOK;
     }
 
     public function categories(){

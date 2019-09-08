@@ -18,7 +18,8 @@ class CreateTransactionsTable extends Migration
             $table->integer('quantity')->unsigned();
             $table->integer('buyer_id')->unsigned()->foreign()->references('id')->
                 on('users');;
-            $table->integer('book_id')->unsigned()->foreign()->references('id')->on('books');;
+            $table->integer('book_id')->unsigned()->foreign()->references('id')->on('books');
+             $table->softDeletes();
             $table->timestamps();
 
 

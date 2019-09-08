@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Book;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -27,5 +28,13 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Schema::defaultStringLength(191);
+
+        Book::updated(function($book){
+            if($book->quantity==0 && $book->isAvailable()){
+                $book->status=Book::UNAVAILABLE_BOOK;
+
+                $book->save();
+            }
+        });
     }
 }

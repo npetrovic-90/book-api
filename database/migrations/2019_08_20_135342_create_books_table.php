@@ -21,7 +21,8 @@ class CreateBooksTable extends Migration
             $table->integer('quantity')->unsigned();
             $table->string('status')->default(Book::UNAVAILABLE_BOOK);
             $table->string('image');
-            $table->integer('seller_id')->unsigned()->foreign()->references('id')->on('users');;
+            $table->integer('seller_id')->unsigned()->foreign()->references('id')->on('users');
+             $table->softDeletes();
             $table->timestamps();
 
           
