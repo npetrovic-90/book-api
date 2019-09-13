@@ -7,6 +7,7 @@ use App\User;
 use App\Seller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ApiController;
+use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class SellerBookController extends ApiController
@@ -49,7 +50,7 @@ class SellerBookController extends ApiController
         $data = $request->all();
 
         $data['status']=Book::UNAVAILABLE_BOOK;
-        $data['image']='1.jpeg';
+        $data['image']=$request->image->store('');
         $data['seller_id']=$seller->id;
 
         $book=Book::create($data);
@@ -93,7 +94,13 @@ class SellerBookController extends ApiController
             if($book->isAvailable() && $book->categories()->count()==0){
                 return $this->errorResponse('An active product must have at least one category!',409);
             }
-         } 
+         }
+
+         if($request->hasFile('image')){
+            Storage::delete($book->image);
+            $book->image=$request->image->store('');
+         }
+
          if($book->isClean()){
             return $this->errorResponse('You need to specify different value to update!',422);
 
@@ -116,6 +123,8 @@ class SellerBookController extends ApiController
     {
         //
         $this->checkSeller($seller,$book);
+
+        Storage::delete($book->image);
 
         $book->delete();
 

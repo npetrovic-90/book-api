@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"User",
+				"User\\UserController"
+			],
+			[
+				"cate",
+				"$category〔variable〕"
+			],
+			[
+				"book",
+				"$book〔variable〕"
+			],
+			[
+				"bu",
+				"$buyers〔variable〕"
+			],
+			[
+				"ca",
+				"category"
+			],
+			[
 				"tra",
 				"$transactions〔variable〕"
 			],
@@ -47,25 +67,26 @@
 			"file": "routes/api.php",
 			"settings":
 			{
-				"buffer_size": 1589,
+				"buffer_size": 2897,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/Http/Controllers/Buyer/BuyerCategoryController.php",
+			"file": "app/Providers/AppServiceProvider.php",
 			"settings":
 			{
-				"buffer_size": 590,
+				"buffer_size": 1276,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/Book.php",
+			"file": "app/Http/Controllers/User/UserController.php",
 			"settings":
 			{
-				"buffer_size": 827,
+				"buffer_size": 5213,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -128,13 +149,49 @@
 		"/C/xampp/htdocs/book-api/app",
 		"/C/xampp/htdocs/book-api/app/Http",
 		"/C/xampp/htdocs/book-api/app/Http/Controllers",
-		"/C/xampp/htdocs/book-api/app/Http/Controllers/Buyer",
-		"/C/xampp/htdocs/book-api/app/Traits",
-		"/C/xampp/htdocs/book-api/database",
-		"/C/xampp/htdocs/book-api/routes"
+		"/C/xampp/htdocs/book-api/app/Http/Controllers/User",
+		"/C/xampp/htdocs/book-api/app/Mail",
+		"/C/xampp/htdocs/book-api/resources",
+		"/C/xampp/htdocs/book-api/resources/views",
+		"/C/xampp/htdocs/book-api/resources/views/emails",
+		"/C/xampp/htdocs/book-api/storage",
+		"/C/xampp/htdocs/book-api/storage/logs"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/book-api/resources/views/emails/welcome.blade.php",
+		"/C/xampp/htdocs/book-api/resources/views/emails/confirm.blade.php",
+		"/C/xampp/htdocs/book-api/app/Mail/UserMailChanged.php",
+		"/C/xampp/htdocs/book-api/app/Traits/ApiResponser.php",
+		"/C/xampp/htdocs/book-api/app/Http/Controllers/User/UserController.php",
+		"/C/xampp/htdocs/book-api/app/Mail/UserCreated.php",
+		"/C/xampp/htdocs/book-api/app/User.php",
+		"/C/xampp/htdocs/book-api/database/seeds/DatabaseSeeder.php",
+		"/C/xampp/htdocs/book-api/app/Book.php",
+		"/C/xampp/htdocs/book-api/config/filesystems.php",
+		"/C/xampp/htdocs/book-api/config/services.php",
+		"/C/xampp/htdocs/book-api/.env",
+		"/C/xampp/htdocs/book-api/public/img/.gitignore",
+		"/C/xampp/htdocs/book-api/config/mail.php",
+		"/C/xampp/htdocs/book-api/.env.example",
+		"/C/xampp/htdocs/book-api/app/Http/Controllers/Seller/SellerBookController.php",
+		"/C/xampp/htdocs/book-api/public/img/weHuUeJtSla5mQ979V2gLEgoR871bcuSWRizk0k3.jpeg",
+		"/C/xampp/htdocs/book-api/routes/api.php",
+		"/C/xampp/htdocs/book-api/database/factories/UserFactory.php",
+		"/C/xampp/htdocs/book-api/app/Providers/AppServiceProvider.php",
+		"/C/xampp/htdocs/book-api/app/Http/Controllers/Book/BookBuyerTransactionController.php",
+		"/C/xampp/htdocs/book-api/app/Http/Controllers/Book/BookCategoryController.php",
+		"/C/xampp/htdocs/book-api/app/Http/Controllers/Book/BookBuyerController.php",
+		"/C/xampp/htdocs/book-api/app/Http/Controllers/Book/BookTransactionController.php",
+		"/C/xampp/htdocs/book-api/app/Http/Controllers/Seller/SellerBuyerController.php",
+		"/C/xampp/htdocs/book-api/app/Http/Controllers/Seller/SellerCategoryController.php",
+		"/C/xampp/htdocs/book-api/app/Http/Controllers/Seller/SellerTransactionController.php",
+		"/C/xampp/htdocs/book-api/app/Category.php",
+		"/C/xampp/htdocs/book-api/app/Http/Controllers/Category/CategoryBuyerController.php",
+		"/C/xampp/htdocs/book-api/app/Http/Controllers/Category/CategoryTransactionController.php",
+		"/C/xampp/htdocs/book-api/app/Http/Controllers/Category/CategorySellerController.php",
+		"/C/xampp/htdocs/book-api/app/Http/Controllers/Category/CategoryBookController.php",
+		"/C/xampp/htdocs/book-api/app/Http/Controllers/Buyer/BuyerCategoryController.php",
 		"/C/xampp/htdocs/book-api/app/Http/Controllers/Buyer/BuyerBookController.php",
 		"/C/xampp/htdocs/book-api/app/Http/Controllers/Buyer/BuyerSellerController.php",
 		"/C/xampp/htdocs/book-api/app/Http/Controllers/Buyer/BuyerTransactionController.php",
@@ -143,10 +200,7 @@
 		"/C/xampp/htdocs/book-api/app/Http/Controllers/Transaction/TransactionController.php",
 		"/C/xampp/htdocs/book-api/app/Http/Controllers/Book/BookController.php",
 		"/C/xampp/htdocs/book-api/app/Http/Controllers/Category/CategoryController.php",
-		"/C/xampp/htdocs/book-api/app/Category.php",
-		"/C/xampp/htdocs/book-api/app/User.php",
 		"/C/xampp/htdocs/book-api/app/Transaction.php",
-		"/C/xampp/htdocs/book-api/app/Book.php",
 		"/C/xampp/htdocs/book-api/database/migrations/2019_08_20_135359_create_transactions_table.php",
 		"/C/xampp/htdocs/book-api/database/migrations/2019_08_20_135342_create_books_table.php",
 		"/C/xampp/htdocs/book-api/database/migrations/2014_10_12_000000_create_users_table.php",
@@ -157,27 +211,19 @@
 		"/C/xampp/htdocs/book-api/vendor/laravel/framework/src/Illuminate/Contracts/Debug/ExceptionHandler.php",
 		"/C/xampp/htdocs/book-api/vendor/laravel/framework/src/Illuminate/Validation/ValidationException.php",
 		"/C/xampp/htdocs/book-api/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
-		"/C/xampp/htdocs/book-api/routes/api.php",
-		"/C/xampp/htdocs/book-api/app/Http/Controllers/User/UserController.php",
 		"/C/xampp/htdocs/book-api/app/Http/Controllers/Seller/SellerController.php",
 		"/C/xampp/htdocs/book-api/app/Http/Controllers/Buyer/BuyerController.php",
 		"/C/xampp/htdocs/book-api/app/Http/Controllers/ApiController.php",
-		"/C/xampp/htdocs/book-api/app/Traits/ApiResponser.php",
-		"/C/xampp/htdocs/book-api/database/seeds/DatabaseSeeder.php",
-		"/C/xampp/htdocs/book-api/database/factories/UserFactory.php",
 		"/C/xampp/htdocs/book-api/app/Seller.php",
 		"/C/xampp/htdocs/book-api/database/migrations/2019_08_20_151930_book_category_table.php",
 		"/C/xampp/htdocs/book-api/database/migrations/2019_08_20_151725_category_book_table.php",
-		"/C/xampp/htdocs/book-api/app/Providers/AppServiceProvider.php",
 		"/C/xampp/htdocs/book-api/config/app.php",
 		"/C/xampp/htdocs/book-api/config/database.php",
 		"/C/xampp/htdocs/book-api/app/Buyer.php",
 		"/C/xampp/htdocs/book-api/routes/web.php",
-		"/C/xampp/htdocs/book-api/.env",
 		"/C/xampp/htdocs/book-api/app/Providers/RouteServiceProvider.php",
 		"/C/xampp/htdocs/book-api/routes/channels.php",
 		"/C/xampp/htdocs/book-api/.gitignore",
-		"/C/xampp/htdocs/book-api/config/filesystems.php",
 		"/C/Users/Rex/AppData/Roaming/Sublime Text 3/Packages/User/PHP Companion.sublime-settings",
 		"/C/Users/Rex/AppData/Roaming/Sublime Text 3/Packages/PHP Companion/PHP Companion.sublime-settings",
 		"/C/xampp/htdocs/book-api/vendor/laravel/framework/src/Illuminate/Notifications/Notifiable.php",
@@ -199,6 +245,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Book",
+			"Product",
 			"convertValidation"
 		],
 		"highlight": true,
@@ -217,7 +265,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -226,20 +274,20 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1589,
+						"buffer_size": 2897,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								486,
-								486
+								2894,
+								2894
 							]
 						],
 						"settings":
 						{
-							"SL.51.region_keys":
+							"SL.35.region_keys":
 							[
 								"sublime_linter.protected_regions"
 							],
@@ -247,7 +295,7 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 54.0,
+						"translation.y": 648.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -255,24 +303,24 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/Http/Controllers/Buyer/BuyerCategoryController.php",
+					"file": "app/Providers/AppServiceProvider.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 590,
+						"buffer_size": 1276,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								520,
-								520
+								1097,
+								1097
 							]
 						],
 						"settings":
 						{
-							"SL.63.region_keys":
+							"SL.42.region_keys":
 							[
 								"sublime_linter.protected_regions"
 							],
@@ -282,43 +330,45 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 414.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/Book.php",
-					"semi_transient": true,
+					"file": "app/Http/Controllers/User/UserController.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 827,
+						"buffer_size": 5213,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								450,
-								450
+								5075,
+								5075
 							]
 						],
 						"settings":
 						{
-							"SL.65.region_keys":
+							"SL.53.region_keys":
 							[
+								"sublime_linter.protected_regions"
 							],
+							"auto_complete": false,
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2844.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
