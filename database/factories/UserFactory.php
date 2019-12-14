@@ -36,7 +36,7 @@ $factory->define(User::class, function (Faker $faker) {
 $factory->define(Category::class, function (Faker $faker) {
     return [
         'name' => $faker->word,
-        'description' =>$faker->paragraph(1), 
+        'description' =>$faker->paragraph(1),
     ];
 });
 
@@ -46,7 +46,7 @@ $factory->define(Book::class, function (Faker $faker) {
         'description' =>$faker->paragraph(1),
         'quantity' =>$faker->numberBetween(1,10),
         'status'=>$faker->randomElement([Book::AVAILABLE_BOOK,Book::UNAVAILABLE_BOOK]),
-        'image'=>$faker->randomElement(['1.jpeg','2.jpeg','3.jpeg']),
+        'image'=>$faker->randomElement(['1.jpg','2.jpg','3.jpg']),
         'seller_id'=>User::all()->random()->id,
     ];
 });

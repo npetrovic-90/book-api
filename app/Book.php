@@ -5,6 +5,7 @@ namespace App;
 use App\Seller;
 use App\Category;
 use App\Transaction;
+use App\Transformers\BookTransformer;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -15,6 +16,8 @@ class Book extends Model
 
     const AVAILABLE_BOOK='available';
     const UNAVAILABLE_BOOK='unavailable';
+
+    public $transformer=BookTransformer::class;
 
     protected $dates=['deleted_at'];
 
@@ -28,7 +31,7 @@ class Book extends Model
 
 
     ];
-    
+
     protected $hidden=['pivot'];
 
     public function isAvailable(){
@@ -47,5 +50,5 @@ class Book extends Model
     public function transactions(){
         return $this->hasMany(Transaction::class);
     }
-    
+
 }

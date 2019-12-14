@@ -22,8 +22,8 @@ class BookController extends ApiController
         return $this->showAll($books);
     }
 
-    
-    
+
+
 
     /**
      * Display the specified resource.
@@ -38,5 +38,5 @@ class BookController extends ApiController
         return $this->showOne($book);
     }
 
-    
+
 }
