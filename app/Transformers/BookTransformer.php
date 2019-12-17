@@ -48,4 +48,24 @@ class BookTransformer extends TransformerAbstract
 
         ];
     }
+
+    public static function originalAttribute($index){
+
+        $attributes = [
+            'identifier'=> 'id',
+            'title'=> 'title',
+            'details'=> 'description',
+            'stock'=> 'quantity',
+            'situation'=> 'status',
+            'picture'=> 'image',
+            'seller'=> 'seller_id',
+            'creationDate'=>'created_at',
+            'lastChange'=>'updated_at',
+            'deletedDate'=>'deleted_at',
+
+            //
+        ];
+
+        return isset($attributes[$index]) ? $attributes[$index] : null;
+    }
 }

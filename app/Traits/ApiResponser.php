@@ -30,9 +30,13 @@ trait ApiResponser
 
 	    //getting transformer of first element
 	    $transformer=$collection->first()->transformer;
-
+	    //filtering data first, for example: selecting admin that is also verified
+        $collection=$this->filterData($collection,$transformer);
+        //sorting data first
+        $collection=$this->sortData($collection,$transformer);
 	    //using transformData() to transform data from out model to transformer
 	    $collection=$this->transformData($collection,$transformer);
+
 
 		return $this->successResponse($collection,$code);
 	}
@@ -53,6 +57,34 @@ trait ApiResponser
 
 		return $this->successResponse(['data'=>$message],$code);
 	}
+
+	//filtering data, by attributes passed through url, can be more than one attribute
+    protected  function  filterData(Collection $collection,$transformer){
+
+	    foreach(request()->query() as $query=>$value){
+            $attribute = $transformer::originalAttribute($query);
+
+            if(isset($attribute,$value)){
+
+                $collection=$collection->where($attribute,$value);
+            }
+        }
+
+	    return $collection;
+    }
+
+	//sorting data by sort_by attribute, which is passed through url.
+	protected  function  sortData(Collection $collection,$transformer){
+
+	    if(request()->has('sort_by')){
+
+	        $attribute=$transformer::originalAttribute(request()->sort_by);
+
+	        $collection=$collection->sortBy->{$attribute};
+        }
+
+	    return $collection;
+    }
 
 	//function that we use to transform data from our model to our transformer
 	protected function transformData($data,$transformer){
