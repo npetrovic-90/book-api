@@ -2,8 +2,12 @@
 
 namespace App\Traits;
 
+
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Validator;
+
 
 trait ApiResponser
 {
@@ -34,6 +38,8 @@ trait ApiResponser
         $collection=$this->filterData($collection,$transformer);
         //sorting data first
         $collection=$this->sortData($collection,$transformer);
+        //paginating data
+        $collection=$this->paginateData($collection);
 	    //using transformData() to transform data from out model to transformer
 	    $collection=$this->transformData($collection,$transformer);
 
@@ -84,6 +90,45 @@ trait ApiResponser
         }
 
 	    return $collection;
+    }
+    //custom paginate method
+    protected  function paginateData(Collection $collection){
+
+	    $rules=[
+	        'per_page'=>'integer|min:2|max:50',
+        ];
+
+
+	    Validator::validate(request()->all(),$rules);
+        //element per page,default
+        $perPage=15;
+        //We change $perPage, if we get custom per_page in request
+        if(request()->has('per_page')){
+
+            $perPage=(int) request()->per_page;
+
+        }
+
+	    //current page
+	    $page = LengthAwarePaginator::resolveCurrentPage();
+
+
+	    //creating slice of collection we want to paginate
+	    $results=$collection->slice(($page-1)*$perPage,$perPage)->values();
+
+	    //create new LengthAwarePaginator, attributes are:
+        // $result-slice of collection,collection length, elements per page, page number and
+        // path attribute, that is used to resolve next and previous page
+
+	    $paginated = new LengthAwarePaginator($results, $collection->count(),$perPage,$page, [
+                'path'=>LengthAwarePaginator::resolveCurrentPath(),
+            ]);
+        //LengthAwarePaginator ignores all other attributes, that are passed through url/request, so we have to
+        // append them
+	    $paginated->appends(request()->all());
+
+	    return $paginated;
+
     }
 
 	//function that we use to transform data from our model to our transformer
